@@ -1,28 +1,27 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import defaultProperty from "../../assets/defaultProperty.jpg"
-export default function PropertyCard({image=defaultProperty,title,text}) {
+
+export default function PropertyCard({image=defaultProperty,title,apartmentinfo,price,location}) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 300,boxShadow:3}}>
       <CardMedia
-        sx={{ height: 200 }}
+        sx={{ height: 250 }}
         title={title ||`green iguana`}
         image={image||""}
       />
-      <CardContent align='left'>
-        <Typography gutterBottom variant="h5" component="div">
-        Large 4 room Apartment With Beautiful Terrace
+      <CardContent sx={{width:"300px"}} align='left'>
+        <Typography  sx={{color:'141b2d',fontFamily:"MerriWeather",fontSize:"21.25px",fontWeight:'bold'}} gutterBottom variant="h5" component="div">
+        Large 4-room apartment with beautiful terrace
         </Typography>
-        <Typography  variant="body2" color="text.secondary">
-         320.00
+        <Typography  sx={{color: '#1c3988',fontWeight:'bold',fontFamily:"Open Sans"}}  variant="body2" color="text.primary">
+         380000€ 
         </Typography>
-        <Typography  variant="body2" color="text.secondary">
-        Barcelone IV
+        <Typography sx={{color: '#4f5461',fontFamily:"Regular"}} variant="body2" color="text.secondary">
+        Barcelone IV.
         </Typography>
       </CardContent>
      

@@ -5,14 +5,14 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import PropertyCard from "./components/Card/Card";
+import PropertySection from "./sections/PropertySection/PropertySection";
 
 function App() {
  
   const router = createBrowserRouter([
     {
       path: "/",
-      element:<PropertyCard/>
+      element:<PropertySection/>
     },
   ]);
   return (
