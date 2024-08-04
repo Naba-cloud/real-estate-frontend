@@ -1,5 +1,5 @@
 import React from 'react'
-import PropertyCard from '../../components/Card/Card'
+import PropertyCard from '../../components/PropertyCard/PropertyCard'
 import { Grid } from '@mui/material'
 const PropertySection = () => {
  return(<Grid container spacing={3}>
