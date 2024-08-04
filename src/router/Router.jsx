@@ -6,6 +6,8 @@ import {
 import PropertySection from "../sections/PropertySection/PropertySection"
 import TestimonialSection from "../sections/TestimonialSection/TestimonialSection";
 import NewsLetterSection from '../sections/NewsLetterSection/NewsLetterSection';
+import Footer from '../components/Footer/Footer';
+import { MainLayout } from '../layouts/MainLayout/MainLayout';
 const Router = () => {
   const router = createBrowserRouter([
     {
@@ -19,6 +21,10 @@ const Router = () => {
     {
       path: "/newsletter",
       element:<NewsLetterSection/>
+    },
+    {
+      path:"/foo",
+      element:<MainLayout/>
     }
   ]);
   return (
