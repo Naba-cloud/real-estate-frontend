@@ -34,8 +34,8 @@ export const NavBar = () => {
   };
 
   return (
-    <AppBar sx={{ background: "none", position: "absolute", top: 0 }}>
-      <Container maxWidth="xl">
+    <AppBar sx={{ background: "none", position: "absolute", top: 0,boxShadow:"none",textTransform:"capitalize",marginTop:"20px" }}>
+      <Container>
         <Toolbar disableGutters>
           <img src={Logo} />
 
@@ -95,16 +95,12 @@ export const NavBar = () => {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, padding: "8px" }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, padding: "10px",color:"black" }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block' }}
-              >
-                <Typography variant="body1" component="div">{page}</Typography>
-              </Button>
-            ))}
+             <Box sx={{  padding: "12px",color:"black" }}>
+                <Typography variant="body1" component="div">{page}</Typography>   
+             </Box>))}
+         
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
