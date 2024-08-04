@@ -9,6 +9,7 @@ import NewsLetterSection from '../sections/NewsLetterSection/NewsLetterSection';
 import Footer from '../components/Footer/Footer';
 import { MainLayout } from '../layouts/MainLayout/MainLayout';
 import AboutUsSection from '../sections/AboutUsSection/AboutUsSection';
+import { NavBar } from '../components/NavBar/NavBar';
 const Router = () => {
   const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const Router = () => {
     {
       path:"/foo",
       element:<AboutUsSection/>
+    },
+    {
+    path:"/test",
+    element:<NavBar/>
     }
   ]);
   return (
